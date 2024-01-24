@@ -1,0 +1,86 @@
+.contact {
+  background-color: var(--dark-blue);
+  color: var(--pink);
+  padding: 30px 60px;
+  @media screen and (min-width: 1024px) {
+   h2{
+    font-size: 2em;
+    padding: .1rem;
+    margin: .1rem;
+   }
+  }
+}
+
+.contactContainer {
+  form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 3;
+
+    input,
+    textarea {
+      flex-grow: 1;
+      margin-bottom: .5rem;
+      background-color: transparent;
+      border: .5px solid var(--light-transparent);
+      padding: .8rem .5rem;
+      font-size: 1em;
+    }
+
+    & input:focus,
+    textarea:focus {
+      outline: none;
+      background-color: var(--light-transparent);
+    }
+
+    button {
+      background-color: var(--pink);
+      color: var(--yellow);
+      border: none;
+      padding: .5rem;
+      font-size: 1em;
+      margin: .5rem 1rem;
+    }
+
+    & button:hover {
+      background-color: #A83C60;
+      cursor: pointer;
+    }
+  }
+
+  .contactCards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    gap: 2rem;
+color: var(--light);
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .1rem;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .contactEmoji {
+      font-size: 2.5rem;
+    }
+
+    .contactTitle {
+      font-weight: 800;
+      font-size: 1.5em;
+      letter-spacing: 2px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,24 @@
+.portfolioContainer {
+  padding: 1rem;
+
+  h2 {
+
+    @media screen and (min-width: 768px) {
+      font-size: 2.5em;
+    }
+  }
+}
+
+.portfolioCardsContainer {
+  display: grid;
+  gap: 1rem;
+  padding: 2rem 1rem 2rem 5rem;
+
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, auto);
+  }
+
+  @media screen and (min-width: 1024px) {}
+
+}

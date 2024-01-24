@@ -1,0 +1,38 @@
+.FixedContainer {
+  position: fixed;
+  top: 0px;
+  bottom: 0;
+  left: -35px;
+  margin: 0;
+  padding-top: 40px;
+  background-color: #1E1E1E;
+  border-right: 1px solid #818181;
+  z-index: 10;
+
+  li {
+    list-style-type: none;
+    font-size: 2em;
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+
+    
+    @media screen and (min-width: 1024px) {
+      font-size: 2.5em;
+    }
+
+    a {
+      color: #939393;
+      text-align: center;
+      width: 100%;
+      padding: .3em;
+      border-left: 2px solid transparent;
+    }
+
+  }
+
+  & a:hover {
+    color: #D6D6D6;
+    border-left: 2px solid #658FD8;
+  }
+}

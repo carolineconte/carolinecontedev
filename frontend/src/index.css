@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+:root {
+  --dark-blue: #242424;
+  --light-blue: #626b97;
+  --orange: #DA7A35;
+  --light: #EEEE;
+  --light-transparent: rgba(227, 237, 255, 0.4);
+  --pink: #6F9BD3;
+  --yellow: #E3E989;
+
+  --box-shadow-light: 1px 1px 5px 3px rgba(151, 151, 151, 0.2);
+  --box-shadow: 1px 1px 10px 10px rgba(59, 59, 59, 0.2);
+
+  --breakpoint-tablet: 768px;
+}
+
+html,
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--light);
+  min-height: 100vh;
+  max-width: 100%;
+
+}
+
+.mainContainer,
+footer {
+  margin-left: 45px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  color: var(--pink);
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  h2 {
+    font-weight: 3em;
+  }
+}

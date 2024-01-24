@@ -1,0 +1,85 @@
+.CardContainer {
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: var(--box-shadow);
+    transform: scale(1.1);
+    z-index: 5;
+    background-color: white;
+  }
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 12px;
+
+  img {
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+  }
+
+  h3 {
+    text-align: center;
+    margin: .5em;
+    text-align: center;
+
+    a {
+      color: var(--dark-blue);
+    }
+  }
+
+  .cardDescription {
+    margin: 0 .5rem .5rem;
+    color: var(--dark-blue);
+    font-weight: 100;
+  }
+
+  .tagsContainer {
+    display: flex;
+    justify-content: center;
+    gap: .2rem;
+
+    p {
+      background-color: var(--dark-blue);
+      padding: .1rem .5rem;
+      border-radius: 5px;
+      color: var(--light);
+    }
+
+  }
+
+  .linksContainer {
+    a {
+      color: var(--dark-blue);
+      text-decoration: underline;
+      cursor: pointer;
+      font-weight: 800;
+      font-size: 1.1em;
+      margin-bottom: .5rem;
+      display: block;
+      padding: .5rem;
+      border-radius: 10px;
+
+      &:hover {
+        background-color: var(--light-transparent);
+      }
+    }
+  }
+
+  .btn {
+    background-color: var(--dark-blue);
+    width: 100%;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+
+    &:hover {
+      background-color: #121111;
+      font-weight: 800;
+    }
+  }
+
+}
