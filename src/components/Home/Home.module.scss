@@ -88,15 +88,17 @@
     }
   }
 
-img {
-  width: 50%;
-  border-radius: 50%;
-  border: 2px solid black;
-object-fit: cover;
-  @media screen and (min-width: 768px) {
-    width: 30%;
-  margin-left: 2em;
-  }
+  img {
+    margin-top: 3rem;
+    width: 70%;
+    border-radius: 50%;
+    border: 2px solid black;
+    object-fit: cover;
 
-}
+    @media screen and (min-width: 768px) {
+      width: 30%;
+      margin-left: 2em;
+    }
+
+  }
 }
