@@ -1,29 +1,30 @@
 import style from './Portfolio.module.scss'
 import { Card } from "./Card"
-import { useEffect, useState } from 'react';
+import { useRecoilValue } from 'recoil';
+import { projectsList } from '../../state/atom';
 export const Portfolio = () => {
 
-  const [projects, setprojects] = useState(null);
+  const projects = useRecoilValue(projectsList)
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('../../../db.json');
-        const data = await response.json();
-        setprojects(data);
-      } catch (error) {
-        console.error('Erro ao carregar dados:', error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch('../../../db.json');
+  //       const data = await response.json();
+  //       setprojects(data);
+  //     } catch (error) {
+  //       console.error('Erro ao carregar dados:', error);
+  //     }
+  //   };
 
-    fetchData();
-  }, [setprojects]);
+  //   fetchData();
+  // }, [setprojects]);
 
-  console.log(projects)
+  // console.log(projects)
 
-  if (!projects) {
-    return <p>Carregando...</p>
-  }
+  // if (!projects) {
+  //   return <p>Carregando...</p>
+  // }
 
   return (
     <section id='portfolio' className={style.portfolioContainer}>

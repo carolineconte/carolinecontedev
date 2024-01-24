@@ -6,11 +6,13 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Link } from 'react-router-dom';
+import { useRecoilValue } from 'recoil';
+import { projectsList } from '../../state/atom';
 
 
 export const ProjectDetail = () => {
   const { id } = useParams();
-  const [projects, setProjects] = useState(null);
+  const projects = useRecoilValue(projectsList)
   const [project, setProject] = useState(null);
 
   const settings = {
@@ -23,20 +25,20 @@ export const ProjectDetail = () => {
     dots: true
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('../../../db.json');
-        const data = await response.json();
-        setProjects(data);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch('../../../db.json');
+  //       const data = await response.json();
+  //       setProjects(data);
 
-      } catch (error) {
-        console.error('Erro ao carregar dados:', error);
-      }
-    };
+  //     } catch (error) {
+  //       console.error('Erro ao carregar dados:', error);
+  //     }
+  //   };
 
-    fetchData();
-  }, [id]);
+  //   fetchData();
+  // }, [id]);
 
   useEffect(() => {
     // Verifique se projects está definido antes de filtrar
@@ -58,7 +60,7 @@ export const ProjectDetail = () => {
   const haveNext = (projects.length > id)
   const next = parseFloat(id) + 1
   const havePrevious = (id > 1)
-  const previous = parseFloat(id) -1
+  const previous = parseFloat(id) - 1
   console.log(havePrevious)
 
   return (
@@ -77,9 +79,9 @@ export const ProjectDetail = () => {
       <h3>Repository: <a target="_blank" rel='noreferrer' href={project.linkRep}>github.com/mmmm</a></h3>
       <h3>Link project: <a target="_blank" rel='noreferrer' href={project.linkProj}>github.com/mmmm</a>  </h3>
       <div className={style.navigationLinks}>
-      {havePrevious && <Link to={`/project/${previous}`}>Progetto precedente</Link>}
-      {haveNext && <Link to={`/project/${next}`}>Prossimo progetto</Link>}
-      <Link to={`/`}>Ritorna alla home page</Link>
+        {havePrevious && <Link to={`/project/${previous}`}>Progetto precedente</Link>}
+        {haveNext && <Link to={`/project/${next}`}>Prossimo progetto</Link>}
+        <Link to={`/`}>Ritorna alla home page</Link>
       </div>
     </div>
   );

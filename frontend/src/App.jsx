@@ -3,11 +3,13 @@ import { FixedIcons } from "./components/FixedIcons"
 import { HomePage } from "./pages/HomePage"
 import { Footer } from "./components/Footer/Footer"
 import { ProjectDetail } from "./components/ProjectDetails/ProjectDetails"
+import { RecoilRoot } from "recoil"
 
 function App() {
 
   return (
     <>
+      <RecoilRoot>
         <BrowserRouter>
           <FixedIcons />
           <Routes>
@@ -16,6 +18,7 @@ function App() {
           </Routes>
           <Footer />
         </BrowserRouter>
+      </RecoilRoot>
     </>
   )
 }
