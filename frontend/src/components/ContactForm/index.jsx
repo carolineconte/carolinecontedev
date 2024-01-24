@@ -11,32 +11,37 @@ export const ContactForm = () => {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
 
-  // Send email
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  // // Send email
 
-    let formData = {
-      name,
-      email,
-      message
-    }
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
 
-    axios.post('http://localhost:3000/', formData, {
-      headers: { 'Content-Type': 'application/json' }
-    })
-      .then(res => {
-        alert(res.data)
-        setEmail('')
-        setMessage('')
-        setName('')
-      })
-      .catch(error => {
-        alert('Something went wrong')
-        console.error('Error sending message', error)
-      })
-  }
+  //   let formData = {
+  //     name,
+  //     email,
+  //     message
+  //   }
+
+  //   axios.post('http://localhost:3000/', formData, {
+  //     headers: { 'Content-Type': 'application/json' }
+  //   })
+  //     .then(res => {
+  //       alert(res.data)
+  //       setEmail('')
+  //       setMessage('')
+  //       setName('')
+  //     })
+  //     .catch(error => {
+  //       alert('Something went wrong')
+  //       console.error('Error sending message', error)
+  //     })
+  // }
+
+
 
   //contacts
+ 
+ 
   const contacts = [{
     title: 'Call me:',
     emoji: <MdCall />,
@@ -55,7 +60,7 @@ export const ContactForm = () => {
       </header>
 
       <div className={style.contactContainer}>
-        <form onSubmit={handleSubmit} >
+        <form action="https://formsubmit.co/carolinecontee@gmail.com" method="POST" >
           <label> Name: </label>
           <input type="text"
             name="name" id="name" placeholder="Name"
