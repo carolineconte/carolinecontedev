@@ -26,11 +26,13 @@ body {
   max-width: 100%;
 
 }
-
-.mainContainer,
-footer {
-  margin-left: 45px;
+@media screen and (min-width: 1024px) {
+  .mainContainer,
+  footer {
+    margin-left: 45px;
+  }
 }
+
 
 a {
   text-decoration: none;
