@@ -92,9 +92,10 @@ const settings = {
       },
     },
     {
-      breakpoint: 767, // Define outro ponto de quebra se necessário
+      breakpoint: 767,
       settings: {
-        slidesToShow: 3, // Número de slides a mostrar em telas menores
+        slidesToShow: 3, 
+        slidesToScroll: 3,
       },
     },
   ],
