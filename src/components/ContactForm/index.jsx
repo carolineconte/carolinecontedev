@@ -22,7 +22,7 @@ export const ContactForm = () => {
       message
     }
 
-    axios.post('http://localhost:3000/', formData, {
+    axios.post('https://api.carolinecontedev.com/', formData, {
       headers: { 'Content-Type': 'application/json' }
     })
       .then(res => {
@@ -32,7 +32,7 @@ export const ContactForm = () => {
         setName('')
       })
       .catch(error => {
-        alert('Something went wrong')
+        alert('Something went wrong', error)
         console.error('Error sending message', error)
       })
   }
