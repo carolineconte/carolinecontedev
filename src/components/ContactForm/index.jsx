@@ -56,7 +56,7 @@ export const ContactForm = () => {
   return (
     <article id="contact" className={style.contact}>
       <header>
-        <h2>Contact  me:</h2>
+        <h2>Contact</h2>
       </header>
 
       <div className={style.contactContainer}>
