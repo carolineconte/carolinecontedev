@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { MdCall, MdEmail } from "react-icons/md";
+// import { MdCall, MdEmail } from "react-icons/md";
 
 
 import style from './ContactForm.module.scss'
@@ -41,16 +41,16 @@ export const ContactForm = () => {
   //contacts
  
  
-  const contacts = [{
-    title: 'Call me:',
-    emoji: <MdCall />,
-    contact: ' +39 371 540 3003'
-  }, {
-    title: 'Email me:',
-    emoji: <MdEmail />,
-    contact: 'carolinecontee@gmail.com'
-  }
-  ]
+  // const contacts = [{
+  //   title: 'Call me:',
+  //   emoji: <MdCall />,
+  //   contact: ' +39 371 540 3003'
+  // }, {
+  //   title: 'Email me:',
+  //   emoji: <MdEmail />,
+  //   contact: 'carolinecontee@gmail.com'
+  // }
+  // ]
 
   return (
     <article id="contact" className={style.contact}>
@@ -80,7 +80,7 @@ export const ContactForm = () => {
 
           <button type="submit">SUBMIT</button>
         </form>
-        <div className={style.contactCards}>
+        {/* <div className={style.contactCards}>
           {
             contacts.map(contact => (<div key={contact.title} className={style.card}>
               <p className={style.contactEmoji}>{contact.emoji}</p>
@@ -88,7 +88,7 @@ export const ContactForm = () => {
               <p>{contact.contact}</p>
             </div>))
           }
-        </div>
+        </div> */}
       </div>
     </article>
   )
