@@ -4,6 +4,7 @@ import { useState } from 'react'
 
 
 import style from './ContactForm.module.scss'
+import axios from 'axios'
 export const ContactForm = () => {
 
   const [name, setName] = useState('')
@@ -12,29 +13,29 @@ export const ContactForm = () => {
 
   // // Send email
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
+  const handleSubmit = (e) => {
+    e.preventDefault()
 
-  //   let formData = {
-  //     name,
-  //     email,
-  //     message
-  //   }
+    let formData = {
+      name,
+      email,
+      message
+    }
 
-  //   axios.post('http://localhost:3000/', formData, {
-  //     headers: { 'Content-Type': 'application/json' }
-  //   })
-  //     .then(res => {
-  //       alert(res.data)
-  //       setEmail('')
-  //       setMessage('')
-  //       setName('')
-  //     })
-  //     .catch(error => {
-  //       alert('Something went wrong')
-  //       console.error('Error sending message', error)
-  //     })
-  // }
+    axios.post('http://localhost:3000/', formData, {
+      headers: { 'Content-Type': 'application/json' }
+    })
+      .then(res => {
+        alert(res.data)
+        setEmail('')
+        setMessage('')
+        setName('')
+      })
+      .catch(error => {
+        alert('Something went wrong')
+        console.error('Error sending message', error)
+      })
+  }
 
 
 
@@ -59,7 +60,7 @@ export const ContactForm = () => {
       </header>
 
       <div className={style.contactContainer}>
-        <form action="https://formsubmit.co/carolinecontee@gmail.com" method="POST" >
+        <form onSubmit={handleSubmit} >
           <label> Name: </label>
           <input type="text"
             name="name" id="name" placeholder="Name"
